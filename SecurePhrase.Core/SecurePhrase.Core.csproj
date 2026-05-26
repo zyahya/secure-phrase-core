@@ -4,6 +4,16 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>SecurePhrase</PackageId>
+    <Version>0.1.0</Version>
+
+    <Authors>Ziad Yahya</Authors>
+
+    <RepositoryUrl>https://github.com/zyahaya/secure-phrase-core</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
