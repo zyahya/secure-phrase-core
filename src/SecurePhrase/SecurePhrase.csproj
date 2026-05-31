@@ -6,18 +6,20 @@
     <Nullable>enable</Nullable>
 
     <PackageId>SecurePhrase</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
 
     <Authors>Ziad Yahya</Authors>
 
-    <RepositoryUrl>https://github.com/zyahaya/secure-phrase-core</RepositoryUrl>
+    <RepositoryUrl>https://github.com/zyahya/secure-phrase-core</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="./Data/*.txt" />
+    <None Include=".\Assets\icon.png" Pack="true" PackagePath="\" />
+    <EmbeddedResource Include=".\Data\*.txt" />
   </ItemGroup>
 
 </Project>

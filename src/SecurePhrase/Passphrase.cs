@@ -1,14 +1,14 @@
 ﻿using System.Reflection;
 
-namespace SecurePhrase.Core;
+namespace SecurePhrase;
 
-public class GeneratePassphrase
+public static class Passphrase
 {
-    public List<string> RetrieveWordlistData()
+    private static List<string> RetrieveWordlistData()
     {
         var words = new List<string>();
         var assembly = Assembly.GetExecutingAssembly();
-        var resourceName = "SecurePhrase.Core.Data.eff_short_wordlist_1.txt";
+        var resourceName = "SecurePhrase.Data.eff_short_wordlist_1.txt";
 
         using var stream = assembly.GetManifestResourceStream(resourceName);
         using var reader = new StreamReader(stream!);
@@ -21,7 +21,7 @@ public class GeneratePassphrase
         return words;
     }
 
-    public string[] SelectRandomWords(int count = 5)
+    private static string[] SelectRandomWords(int count = 5)
     {
         var words = RetrieveWordlistData();
 
@@ -30,12 +30,12 @@ public class GeneratePassphrase
         return result;
     }
 
-    public string JoinWords(string[] words, string separator = "-")
+    private static string JoinWords(string[] words, string separator = "-")
     {
         return string.Join(separator, words);
     }
 
-    public string Generate(int count = 5)
+    public static string Generate(int count = 5)
     {
         var words = SelectRandomWords(count);
         var passphrase = JoinWords(words, "-");

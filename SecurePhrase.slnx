@@ -1,3 +1,8 @@
 <Solution>
-  <Project Path="SecurePhrase.Core/SecurePhrase.Core.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/SecurePhrase/SecurePhrase.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SecurePhrase.Tests/SecurePhrase.Tests.csproj" />
+  </Folder>
 </Solution>
